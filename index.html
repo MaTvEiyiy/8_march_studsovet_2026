@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Свайпацан</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="hero__tag">Международный женский день</p>
+      <h1>Соберите идеального кавалера</h1>
+      <p class="hero__text">
+        Пролистывайте три ряда, комбинируйте образ и нажимайте «Готово».
+      </p>
+    </header>
+
+    <section class="builder" aria-label="Конструктор образа">
+      <article class="part-row" data-part="heads">
+        <div class="carousel-viewport" aria-live="polite">
+          <div class="carousel-track"></div>
+        </div>
+        <div class="row-controls">
+          <button class="nav-btn prev" type="button" aria-label="Прокрутить головы влево">←</button>
+          <span class="counter"></span>
+          <button class="nav-btn next" type="button" aria-label="Прокрутить головы вправо">→</button>
+        </div>
+      </article>
+
+      <article class="part-row" data-part="bodies">
+        <div class="carousel-viewport" aria-live="polite">
+          <div class="carousel-track"></div>
+        </div>
+        <div class="row-controls">
+          <button class="nav-btn prev" type="button" aria-label="Прокрутить туловища влево">←</button>
+          <span class="counter"></span>
+          <button class="nav-btn next" type="button" aria-label="Прокрутить туловища вправо">→</button>
+        </div>
+      </article>
+
+      <article class="part-row" data-part="legs">
+        <div class="carousel-viewport" aria-live="polite">
+          <div class="carousel-track"></div>
+        </div>
+        <div class="row-controls">
+          <button class="nav-btn prev" type="button" aria-label="Прокрутить ноги влево">←</button>
+          <span class="counter"></span>
+          <button class="nav-btn next" type="button" aria-label="Прокрутить ноги вправо">→</button>
+        </div>
+      </article>
+    </section>
+
+    <button class="done-btn" id="doneButton" type="button">Готово</button>
+  </main>
+
+  <div class="modal" id="invitationModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" type="button" data-close-modal aria-label="Закрыть">&times;</button>
+      <h2 id="modalTitle">Приглашение на праздник</h2>
+      <p class="invite-text">
+        Дорогие девушки!<br>
+        Приглашаем вас на празднование 8 Марта.
+      </p>
+      <ul class="invite-list">
+        <li><strong>Дата:</strong> 7 марта 2026</li>
+        <li><strong>Сбор гостей:</strong> 19:00</li>
+        <li><strong>Место:</strong> ЦДС</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
